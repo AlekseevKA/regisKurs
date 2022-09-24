@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "855576699436",
+    "project_id": "demoreg-46c81",
+    "storage_bucket": "demoreg-46c81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855576699436:android:6478a43ba88feb4ed06789",
+        "android_client_info": {
+          "package_name": "com.example.regis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855576699436-e55ccucvig91v361ktvl8v0a3ck2gihe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC43cHYjMjNFtsMO0Eyqez7ooDe6xW_5II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855576699436-e55ccucvig91v361ktvl8v0a3ck2gihe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
