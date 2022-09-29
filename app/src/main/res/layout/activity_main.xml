@@ -28,6 +28,7 @@
         android:text="Smart House"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -44,8 +45,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
-        android:layout_height="160dp"
+        style="@style/linerlayout"
+        android:layout_width="384dp"
+        android:layout_height="170dp"
         android:layout_marginTop="20dp"
         android:background="#68FFEAAB"
         android:orientation="vertical"
@@ -60,8 +62,7 @@
             android:ems="10"
             android:hint="E-mail"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#FFFFFF" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/mainName"
@@ -70,8 +71,7 @@
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#FFFFFF" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/mainPassword"
@@ -79,36 +79,40 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Password"
-            android:hintTextColor="#5D4037"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="#FFFFFF" />
+            android:minHeight="48dp" />
 
 
     </LinearLayout>
 
     <Button
         android:id="@+id/loginButton2"
+        style="@style/ButtonStyle"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginStart="55dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
+        android:background="@drawable/button"
+        android:onClick="onClickSignIn"
         android:text="Enter Your House"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/button2"
+        style="@style/Button2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="56dp"
-        android:backgroundTint="#2A2A37"
-        android:text="New Resident"
 
+        android:background="@drawable/button2"
+        android:onClick="onClickSignUp"
+        android:text="New Resident"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton2" />

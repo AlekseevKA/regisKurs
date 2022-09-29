@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         FirebaseUser cUser = mAuth.getCurrentUser();
+
         if(cUser != null)
         {
             Toast.makeText(this, "user not null", Toast.LENGTH_SHORT).show();
