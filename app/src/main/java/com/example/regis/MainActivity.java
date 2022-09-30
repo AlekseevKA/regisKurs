@@ -3,6 +3,7 @@ package com.example.regis;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -43,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void init()
     {
-        mainEmail = findViewById(R.id.loginName);
-        mainPassword = findViewById(R.id.loginPassword);
+        mainEmail = findViewById(R.id.mainEmail);
+        mainPassword = findViewById(R.id.mainPassword);
         mainName = findViewById(R.id.mainName);
 
         mAuth = FirebaseAuth.getInstance();
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSignIn(View view)
     {
-        if(!TextUtils.isEmpty(mainEmail.getText().toString()) && !TextUtils.isEmpty(mainPassword.getText().toString())) {
+       if(!TextUtils.isEmpty(mainEmail.getText().toString()) && !TextUtils.isEmpty(mainPassword.getText().toString())) {
 
             mAuth.signInWithEmailAndPassword(mainEmail.getText().toString(), mainPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
                     if(task.isSuccessful())
                     {
                         Toast.makeText(getApplicationContext(), "Sign in successful", Toast.LENGTH_SHORT).show();
+                        Intent intent;
+                        intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
                     }
                     else
                     {

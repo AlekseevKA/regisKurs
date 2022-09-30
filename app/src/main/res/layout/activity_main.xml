@@ -62,7 +62,8 @@
             android:ems="10"
             android:hint="E-mail"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/mainName"
@@ -71,7 +72,8 @@
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/mainPassword"
@@ -80,7 +82,8 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColorHint="#FFFFFF" />
 
 
     </LinearLayout>
@@ -94,11 +97,11 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
         android:background="@drawable/button"
-        android:onClick="onClickSignIn"
-        android:text="Enter Your House"
+        android:onClick="onClickSignUp"
+        android:text="Зарегистрироватся"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
@@ -111,8 +114,8 @@
         android:layout_marginEnd="56dp"
 
         android:background="@drawable/button2"
-        android:onClick="onClickSignUp"
-        android:text="New Resident"
+        android:onClick="onClickSignIn"
+        android:text="Войти"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton2" />
