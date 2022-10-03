@@ -45,11 +45,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        style="@style/linerlayout"
-        android:layout_width="344dp"
-        android:layout_height="169dp"
+        android:layout_width="383dp"
+        android:layout_height="202dp"
         android:layout_marginTop="20dp"
-        android:background="#68FFEAAB"
+        android:background="@drawable/linearlayoutst"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,17 +57,20 @@
         <EditText
             android:id="@+id/mainEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/white"
             android:ems="10"
+
             android:hint="E-mail"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/mainName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/white"
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
@@ -78,10 +80,11 @@
         <EditText
             android:id="@+id/mainPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/white"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColorHint="#FFFFFF" />
 
@@ -90,33 +93,33 @@
 
     <Button
         android:id="@+id/loginButton2"
-        style="@style/ButtonStyle"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginStart="55dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
-        android:background="@drawable/button"
+        android:background="@drawable/btn1"
+
         android:onClick="onClickSignUp"
         android:text="Зарегистрироватся"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/button2"
-        style="@style/Button2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="56dp"
 
-        android:background="@drawable/button2"
+        android:background="@drawable/btn2"
+        android:backgroundTint="#2A2A37"
         android:onClick="onClickSignIn"
         android:text="Войти"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton2" />
 

@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="777dp"
-        android:layout_height="733dp"
+        android:layout_width="976dp"
+        android:layout_height="727dp"
         android:alpha="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,10 +44,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="328dp"
-        android:layout_height="119dp"
+        android:layout_width="384dp"
+        android:layout_height="162dp"
         android:layout_marginTop="20dp"
-        android:background="#68FFEAAB"
+        android:background="@drawable/linearlayoutst"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,20 +56,22 @@
         <EditText
             android:id="@+id/loginName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="@android:color/white"
             android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
             android:textColorHint="#FFFFFF"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/loginPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="@android:color/white"
             android:ems="10"
-            android:hint="Passwrod"
-            android:inputType="textPersonName"
+            android:hint="Password"
+            android:inputType="textPassword"
             android:minHeight="48dp"
             android:textColorHint="#FFFFFF" />
     </LinearLayout>
@@ -81,9 +83,9 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="56dp"
+        android:background="@drawable/btn1"
         android:onClick="onClickSignIn"
         android:text="Enter Your House"
-        android:background="@drawable/button"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,12 +95,13 @@
         android:id="@+id/newButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn2"
 
         android:onClick="onClickSignUp"
         android:text="New Resident"
         app:layout_constraintEnd_toEndOf="@+id/enterButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/enterButton"
         app:layout_constraintTop_toBottomOf="@+id/enterButton" />
 
