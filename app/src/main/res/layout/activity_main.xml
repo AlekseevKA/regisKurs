@@ -110,7 +110,6 @@
         android:id="@+id/button2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="56dp"
 
@@ -118,9 +117,9 @@
         android:backgroundTint="#2A2A37"
         android:onClick="onClickSignIn"
         android:text="Войти"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/loginButton2"
         app:layout_constraintTop_toBottomOf="@+id/loginButton2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
