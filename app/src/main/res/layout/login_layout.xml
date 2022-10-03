@@ -44,8 +44,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
-        android:layout_height="126dp"
+        android:layout_width="328dp"
+        android:layout_height="119dp"
         android:layout_marginTop="20dp"
         android:background="#68FFEAAB"
         android:orientation="vertical"
@@ -83,6 +83,8 @@
         android:layout_marginEnd="56dp"
         android:onClick="onClickSignIn"
         android:text="Enter Your House"
+        android:background="@drawable/button"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -92,7 +94,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#2A2A37"
+        android:background="@drawable/button"
 
         android:onClick="onClickSignUp"
         android:text="New Resident"
