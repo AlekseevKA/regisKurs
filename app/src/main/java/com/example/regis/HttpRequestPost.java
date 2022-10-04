@@ -28,9 +28,11 @@ public class HttpRequestPost {
             httpURLConnection.setDoOutput(true);
             httpURLConnection.setDoInput(true);
 
+            httpURLConnection.setRequestProperty("Content-Type", "application/json");
+            httpURLConnection.setRequestProperty("Accept", "application/json");
 
-            httpURLConnection.addRequestProperty("User-Agent", "Mozulla/5.0");
-            httpURLConnection.addRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+     //       httpURLConnection.addRequestProperty("asd", "asd");
+     //      httpURLConnection.addRequestProperty("asd", "asd");
 
 
 
