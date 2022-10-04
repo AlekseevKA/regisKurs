@@ -101,22 +101,23 @@
         android:background="@drawable/btn1"
 
         android:onClick="onClickSignUp"
-        android:text="Зарегистрироватся"
+        android:text="New Resident"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="56dp"
 
         android:background="@drawable/btn2"
         android:backgroundTint="#2A2A37"
         android:onClick="onClickSignIn"
-        android:text="Войти"
+        android:text="Enter Your House"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/loginButton2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/loginButton2"

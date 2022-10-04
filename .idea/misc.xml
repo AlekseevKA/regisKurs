@@ -15,9 +15,9 @@
         <entry key="app/src/main/res/drawable/linearlayoutst.xml" value="0.2361111111111111" />
         <entry key="app/src/main/res/drawable/linerlayout.xml" value="0.48148148148148145" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.25227963525835867" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_splach.xml" value="0.11481481481481481" />
-        <entry key="app/src/main/res/layout/login_layout.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/login_layout.xml" value="0.375" />
       </map>
     </option>
   </component>
