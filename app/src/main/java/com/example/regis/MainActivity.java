@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private Button mainButton;
     private regRepository regRepository;
-
+    // fccca1ba-d975-4ba1-829f-ec0739a8c37b api key
+    // http://smarthome.madskill.ru/user request URL
+    // https://app.swaggerhub.com/apis-docs/k5422/smart/1.0.0-oas3#/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
- /*/       @Override
+
+
+
+    /*/ @Override
    protected void onStart() {
         super.onStart();
         FirebaseUser cUser = mAuth.getCurrentUser();
@@ -67,9 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-// fccca1ba-d975-4ba1-829f-ec0739a8c37b api key
-    // http://smarthome.madskill.ru/user request URL
-    // https://app.swaggerhub.com/apis-docs/k5422/smart/1.0.0-oas3#/
+
     private void init()
     {
         mainEmail = findViewById(R.id.mainEmail);

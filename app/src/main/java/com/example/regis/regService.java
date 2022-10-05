@@ -10,15 +10,18 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface regService {
-    @POST("name")
+
+
+
+    @POST("user")
     Call<reg> createreg(@Body reg reg);
 
     @FormUrlEncoded
-    @POST("name")
+    @POST("user")
     Call<reg> createreg(@Field("name") String name, @Field("email") String email, @Field("password") String password);
 
 
     @FormUrlEncoded
-    @POST("name")
+    @POST("user")
     Call<reg> createreg(@FieldMap Map<String, String> fields);
 }
