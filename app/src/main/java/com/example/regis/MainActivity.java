@@ -1,23 +1,19 @@
 package com.example.regis;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-import org.w3c.dom.Comment;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private EditText mainEmail, mainName, mainPassword;
@@ -37,21 +33,42 @@ public class MainActivity extends AppCompatActivity {
         mainName = findViewById(R.id.mainName);
         mainButton = findViewById(R.id.loginButton2);
 
+        CallRetrofit();
 
-        regRepository = regRepository.getInstance();
-        mainButton.setOnClickListener(new View.OnClickListener() {
+
+    }
+    private void CallRetrofit(){
+
+        String postEmail = mainEmail.getText().toString();
+        String postName = mainName.getText().toString();
+        String postPassword = mainPassword.getText().toString();
+
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://petstore.swagger.io/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+
+        regService regservice = retrofit.create(regService.class);
+        RegModel regModel = new RegModel("username", "email", "password");
+
+        Call<RegModel> call = regService.createreg(regModel);
+
+        call.enqueue(new Callback<RegModel>() {
             @Override
-            public void onClick(View view) {
-                reg r = new reg(
-                  mainName.getText().toString(),
-                  mainEmail.getText().toString(),
-                  mainPassword.getText().toString()
-                );
+            public void onResponse(Call<RegModel> call, Response<RegModel> response) {
+                //results
 
+            }
 
+            @Override
+            public void onFailure(Call<RegModel> call, Throwable t) {
 
             }
         });
+
 
     }
 

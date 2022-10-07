@@ -2,7 +2,7 @@ package com.example.regis;
 
 import com.google.gson.annotations.SerializedName;
 
-public class reg {
+public class RegModel {
         @SerializedName("name")
         private String name;
 
@@ -12,7 +12,7 @@ public class reg {
     private String password;
 
 
-        public reg(String name, String email, String password){
+        public RegModel(String name, String email, String password){
             this.email = email;
             this.name = name;
             this.password = password;

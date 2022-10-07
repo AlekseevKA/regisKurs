@@ -14,14 +14,15 @@ public interface regService {
 
 
     @POST("user")
-    Call<reg> createreg(@Body reg reg);
+    Call<RegModel> createreg(@Body RegModel regModel);
+   // Call<RegModel>PostDataIntoServer(@Body RegModel regModel);
 
     @FormUrlEncoded
     @POST("user")
-    Call<reg> createreg(@Field("name") String name, @Field("email") String email, @Field("password") String password);
+    Call<RegModel> createreg(@Field("name") String name, @Field("email") String email, @Field("password") String password);
 
 
     @FormUrlEncoded
     @POST("user")
-    Call<reg> createreg(@FieldMap Map<String, String> fields);
+    Call<RegModel> createreg(@FieldMap Map<String, String> fields);
 }
