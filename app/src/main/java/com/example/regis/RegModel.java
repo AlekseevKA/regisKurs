@@ -3,8 +3,8 @@ package com.example.regis;
 import com.google.gson.annotations.SerializedName;
 
 public class RegModel {
-        @SerializedName("name")
-        private String name;
+        @SerializedName("username")
+        private String username;
 
         @SerializedName("email")
     private String email;
@@ -14,12 +14,12 @@ public class RegModel {
 
         public RegModel(String name, String email, String password){
             this.email = email;
-            this.name = name;
+            this.username = name;
             this.password = password;
         }
 
     public String getName() {
-        return name;
+        return username;
     }
 
     public String getEmail() {

@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class regRepository {
-    private static regRepository instance;
+   /*/ private static regRepository instance;
 
     private regService regService;
 
@@ -34,5 +34,5 @@ public class regRepository {
     public regService getRegService() {
         return regService;
     }
-
+/*/
 }

@@ -38,11 +38,11 @@ public class LoginActivity extends AppCompatActivity {
 
         if(cUser != null)
         {
-            Toast.makeText(this, "user not null", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "user not null", Toast.LENGTH_SHORT).show();
         }
         else
         {
-            Toast.makeText(this, "user null", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "user null", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -57,25 +57,28 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void onClickSignUp(View view)
     {
-     //   if(!TextUtils.isEmpty(loginEmail.getText().toString()) && !TextUtils.isEmpty(loginPassword.getText().toString())) {
-     //       mAuth.createUserWithEmailAndPassword(loginEmail.getText().toString(),loginPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-     //           @Override
-     //           public void onComplete(@NonNull Task<AuthResult> task) {
-     //               if(task.isSuccessful())
-     //               {
-      //                  Toast.makeText(getApplicationContext(), "Sign Up successful", Toast.LENGTH_SHORT).show();
-        //            }
-       //             else
-         //             {
-        //                Toast.makeText(getApplicationContext(), "Sign Up failed", Toast.LENGTH_SHORT).show();
-        //            }
-          //      }
-      //      });
-         //   }
-         //   else
-     //   {
-     //       Toast.makeText(getApplicationContext(), "Please enter Email and Password", Toast.LENGTH_SHORT).show();
-        //    }
+     /*   if(!TextUtils.isEmpty(loginEmail.getText().toString()) && !TextUtils.isEmpty(loginPassword.getText().toString())) {
+            mAuth.createUserWithEmailAndPassword(loginEmail.getText().toString(),loginPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+               @Override
+              public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful())
+                    {
+                        Toast.makeText(getApplicationContext(), "Sign Up successful", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                      {
+                        Toast.makeText(getApplicationContext(), "Sign Up failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+            }
+            else
+        {
+            Toast.makeText(getApplicationContext(), "Please enter Email and Password", Toast.LENGTH_SHORT).show();
+
+           }
+           */
+
         Intent intent;
         intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
@@ -93,14 +96,14 @@ public class LoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        Toast.makeText(getApplicationContext(), "Sign in successful", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getApplicationContext(), "Sign in successful", Toast.LENGTH_SHORT).show();
                         Intent intent;
                         intent = new Intent(LoginActivity.this, HomePage.class);
                         startActivity(intent);
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(), "Sign in failed", Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(getApplicationContext(), "Sign in failed", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

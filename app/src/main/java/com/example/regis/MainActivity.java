@@ -2,12 +2,17 @@ package com.example.regis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
     private EditText mainEmail, mainName, mainPassword;
     private FirebaseAuth mAuth;
-    private Button mainButton;
+    private Button mainButton, mainButton2;
     private regRepository regRepository;
     // fccca1ba-d975-4ba1-829f-ec0739a8c37b api key
     // http://smarthome.madskill.ru/user request URL
@@ -32,9 +37,31 @@ public class MainActivity extends AppCompatActivity {
         mainPassword = findViewById(R.id.mainPassword);
         mainName = findViewById(R.id.mainName);
         mainButton = findViewById(R.id.loginButton2);
+        mainButton2 = findViewById(R.id.button2);
+
 
         CallRetrofit();
 
+        mainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!TextUtils.isEmpty(mainEmail.getText().toString()) && !TextUtils.isEmpty(mainPassword.getText().toString())) {
+                    CallRetrofit();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Please enter Email and Password", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+        mainButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent;
+                intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     private void CallRetrofit(){
@@ -45,26 +72,41 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://petstore.swagger.io/")
+                .baseUrl("https://petstore.swagger.io/v2/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
 
-        regService regservice = retrofit.create(regService.class);
+        regService service = retrofit.create(regService.class);
         RegModel regModel = new RegModel("username", "email", "password");
 
-        Call<RegModel> call = regService.createreg(regModel);
+        Call<RegModel> call = service.PostDataIntoServer(regModel);
+
+
+
 
         call.enqueue(new Callback<RegModel>() {
             @Override
             public void onResponse(Call<RegModel> call, Response<RegModel> response) {
                 //results
 
+                if (response.isSuccessful()){
+                    //успешный запрос
+                    Toast.makeText(getApplicationContext(), "response successful", Toast.LENGTH_SHORT).show();
+
+                } else{
+                    //сервер вернул ошибку
+                    Toast.makeText(getApplicationContext(), "response fail", Toast.LENGTH_SHORT).show();
+
+                }
+
             }
 
             @Override
             public void onFailure(Call<RegModel> call, Throwable t) {
+                // ошибка во время выполнения запроса
 
             }
         });

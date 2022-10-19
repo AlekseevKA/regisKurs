@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class HttpRequestPost {
-    public static void main(String[] args){
+  /*  public static void main(String[] args){
         String urlAdress = "http://smarthome.madskill.ru/user";
         URL url;
         HttpURLConnection httpURLConnection;
@@ -43,4 +43,6 @@ public class HttpRequestPost {
             System.err.print(e.getMessage());
         }
     }
+    */
+
 }
